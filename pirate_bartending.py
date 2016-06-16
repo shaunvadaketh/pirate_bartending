@@ -41,7 +41,7 @@ def ask_Customer():
     return preferences
     
 
-    gggggg
+    
     
     
         
