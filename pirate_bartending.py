@@ -1,3 +1,5 @@
+import random
+
 questions = {
     "strong": "Do ye like yer drinks strong?",
     "salty": "Do ye like it with a salty tang?",
@@ -41,7 +43,13 @@ def ask_Customer():
     return preferences
     
 
+def drink_construction(preferences):
+    drink = [ ]
+    for key,value in preferences.items():
+        if value == True:
+            drink.append(random.choice(ingredients[key]))
+            
+    return drink
     
     
     
-        
