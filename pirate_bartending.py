@@ -1,4 +1,4 @@
-import random
+
 
 questions = {
     "strong": "Do ye like yer drinks strong?",
@@ -44,12 +44,25 @@ def ask_Customer():
     
 
 def drink_construction(preferences):
+    import random
     drink = [ ]
     for key,value in preferences.items():
         if value == True:
             drink.append(random.choice(ingredients[key]))
             
     return drink
+    
+def main():
+    find_preferences = ask_Customer()
+    make_drink = drink_construction(find_preferences)
+    print("One drink coming up!")
+    print("The recipe will be:  {}").format(make_drink)
+    
+if __name__ == "__main__":
+    main()
+    
+    
+    
     
     
     
