@@ -51,11 +51,19 @@ def drink_construction(preferences):
             drink.append(random.choice(ingredients[key]))
             
     return drink
+
+def drink_name():
+    import random
+    adjective = ["salty", "sweet", "fluffy", "magnificent"]
+    noun = ["dog", "cat", "chichilla", "sea-turtle"]
+    print("The name of your drink is {}").format(random.choice(adjective)) + ("-{}").format(random.choice(noun))
+    
     
 def main():
     find_preferences = ask_Customer()
     make_drink = drink_construction(find_preferences)
     print("One drink coming up!")
+    drink_name()
     print("The recipe will be:  {}").format(make_drink)
     
 if __name__ == "__main__":
